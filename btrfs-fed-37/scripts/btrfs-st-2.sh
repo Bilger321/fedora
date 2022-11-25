@@ -12,5 +12,5 @@ chown -R :jbilger /.snapshots
 grub2-editenv - unset menu_auto_hide
 git clone https://github.com/Antynea/grub-btrfs.git /tmp/grub-btrfs
 make -C /tmp/grub-btrfs install
-systemctl enable /tmp/install_scripts/stage2.service
+systemctl enable /opt/fedora-main/btrfs-fed-37/scripts/install_stage_3.service
 reboot
