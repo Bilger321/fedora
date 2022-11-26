@@ -3,8 +3,6 @@ Description=Stage 1 of BTRFS Install
 After=network.target
 
 [Service]
-Type=oneshot
-RemainAfterExit=yes
 ExecStart=/bin/bash /opt/fedora-main/btrfs-fed-37/scripts/btrfs-st-1.sh
 
 [Install]
