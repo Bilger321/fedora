@@ -1,5 +1,10 @@
 #!/bin/bash
 
+exec 5> /var/debug.log
+PS4='$LINENO: ' 
+BASH_XTRACEFD="5" 
+
+chattr -R +C /var/li
 umount /.snapshots
 rmdir /.snapshots
 snapper -c root create-config /
@@ -15,4 +20,5 @@ git -C /opt/grub-brtfs apply /opt/fedora-main/btrfs/scripts/btrfs.patch
 make -C /opt/grub-btrfs install
 systemctl disable /opt/fedora-main/btrfs/scripts/install_stage_2.service
 systemctl enable /opt/fedora-main/btrfs/scripts/install_stage_3.service
+echo "STAGE 2 COMPLETE" >> /home/jbilger/STAGES.log
 reboot
