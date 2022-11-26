@@ -1,8 +1,10 @@
-#!/bin/bash -x
+#!/bin/bash
 
 exec 5> /var/debug.log
 PS4='$LINENO: ' 
-BASH_XTRACEFD="5" 
+BASH_XTRACEFD="5"
+
+set -x
 
 umount /.snapshots
 rmdir /.snapshots

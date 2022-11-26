@@ -1,8 +1,10 @@
-#!/bin/bash -x
+#!/bin/bash
 
 exec 5> /var/debug.log
 PS4='$LINENO: ' 
 BASH_XTRACEFD="5" 
+
+set -x
 
 systemctl disable /opt/fedora-main/btrfs/scripts/install_stage_3.service
 

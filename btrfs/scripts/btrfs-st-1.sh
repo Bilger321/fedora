@@ -1,8 +1,10 @@
-#!/bin/bash -x
+#!/bin/bash
 
 exec 5> /var/debug.log
 PS4='$LINENO: ' 
 BASH_XTRACEFD="5" 
+
+set -x
 
 chattr -R +C /var/lib/libvirt
 echo $'SUSE_BTRFS_SNAPSHOT_BOOTING="true"' >> /etc/default/grub
