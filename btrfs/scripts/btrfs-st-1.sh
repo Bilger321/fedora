@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 exec 5> /var/debug.log
 PS4='$LINENO: ' 
