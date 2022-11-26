@@ -1,0 +1,29 @@
+diff --git a/config b/config
+index 3cca83e..d14894b 100644
+--- a/config
++++ b/config
+@@ -92,7 +92,7 @@ GRUB_BTRFS_IGNORE_PREFIX_PATH=("var/lib/docker" "@var/lib/docker" "@/var/lib/doc
+ # Might be grub2 on some systems.
+ # For example, on Fedora with EFI : "/boot/efi/EFI/fedora"
+ # Default: "/boot/grub"
+-#GRUB_BTRFS_GRUB_DIRNAME="/boot/grub2"
++GRUB_BTRFS_GRUB_DIRNAME="/boot/grub2"
+
+ # Location of kernels/initramfs/microcode.
+ # Use by "grub-btrfs" to detect the boot partition and the location of kernels/initrafms/microcodes.
+@@ -124,13 +124,13 @@ GRUB_BTRFS_IGNORE_PREFIX_PATH=("var/lib/docker" "@var/lib/docker" "@/var/lib/doc
+ # For example, on Fedora : "/sbin/grub2-mkconfig"
+ # You can use only name or full path.
+ # Default: grub-mkconfig
+-#GRUB_BTRFS_MKCONFIG=/usr/bin/grub2-mkconfig
++GRUB_BTRFS_MKCONFIG=/usr/sbin/grub2-mkconfig
+
+ # Name of grub-script-check command, use by "grub-btrfs"
+ # Might be 'grub2-script-check' on some systems (Fedora ...)
+ # For example, on Fedora : "grub2-script-check"
+ # Default: grub-script-check
+-#GRUB_BTRFS_SCRIPT_CHECK=grub2-script-check
++GRUB_BTRFS_SCRIPT_CHECK=grub2-script-check
+
+ # Path of grub-mkconfig_lib file, use by "grub-btrfs"
+ # Might be '/usr/share/grub2/grub-mkconfig_lib' on some systems (Opensuse ...)
