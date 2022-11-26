@@ -1,12 +1,11 @@
 [Unit]
 Description=Stage 3 of BTRFS Install
-Wants=network-online.target
-After=network-online.target
+After=network.target
 
 [Service]
 Type=oneshot
-RemainAfterExit=no
-ExecStart=/opt/fedora-main/btrfs-fed-37/scripts/btrfs-st-3.sh
+RemainAfterExit=yes
+ExecStart=/bin/bash /opt/fedora-main/btrfs-fed-37/scripts/btrfs-st-3.sh
 
 [Install]
 WantedBy=multi-user.target
