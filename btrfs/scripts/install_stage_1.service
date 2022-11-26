@@ -3,7 +3,7 @@ Description=Stage 1 of BTRFS Install
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -x /opt/fedora-main/btrfs/scripts/btrfs-st-1.sh
+ExecStart=/bin/bash -x /opt/fedora-main/btrfs/scripts/btrfs-st-1.sh >> /var/debug.log 2>&1
 
 [Install]
 WantedBy=multi-user.target
