@@ -1,6 +1,6 @@
 [Unit]
 Description=Stage 2 of BTRFS Install
-After=network.target
+After=sshd.service
 
 [Service]
 Type=oneshot
