@@ -6,7 +6,7 @@ To use this on your system, input the following boot line option from the instal
 inst.ks=https://jacobbilger.com/projects/fedora/btrfs/ks.cfg
 ```
 
-The system will reboot 3 times and land on a login prompt, fully configured(!)
+The system will reboot 4 times and land on a login prompt, fully configured(!)
 
 #### Execution Flow
 `===KICKSTART===`
@@ -46,6 +46,10 @@ The system will reboot 3 times and land on a login prompt, fully configured(!)
 8. `btrfs-st-3.sh` preforms the following actions:
    * Disable `install_stage_3.service`
    * Reboot the system
+
+`===REBOOT===`
+
+9. Install is complete!
 
 #### Logging
 Logs are stored at:
