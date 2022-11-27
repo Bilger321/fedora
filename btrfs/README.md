@@ -13,7 +13,7 @@ The system will reboot 4 times and land on a login prompt, fully configured(!)
 1. Kickstart file `ks.cfg` does the following:
    * Provision primary drive with btrfs
    * Install required packages, including [snapper](https://github.com/openSUSE/snapper)
-   * Creates symlinks to systemd service `install_stage_1.service`
+   * Create symlinks to systemd service `install_stage_1.service`
       * This is equivalent to "enabling" a service with `systemctl enable install_stage_1.service`
       * By enabling a service, we are able to maintain control flow through a reboot
       * We will use this method throughout the install
@@ -32,10 +32,10 @@ The system will reboot 4 times and land on a login prompt, fully configured(!)
 
 5. `install_stage_2.service` executes `btrfs-st-2.sh`
 6. `btrfs-st-2.sh` preforms the following actions:
-   * Configures snapper to work with btrfs
-   * Clones down [grub-btrfs](https://github.com/Antynea/grub-btrfs)
-   * Configures `grub-btrfs`
-   * Installs `grub-btrfs`
+   * Configure `snapper` to work with btrfs
+   * Clone down [grub-btrfs](https://github.com/Antynea/grub-btrfs)
+   * Configure `grub-btrfs`
+   * Install `grub-btrfs`
    * Disable `install_stage_2.service`
    * Enable `install_stage_3.service`
    * Reboot the system
