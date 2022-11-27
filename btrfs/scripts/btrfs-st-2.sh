@@ -18,7 +18,7 @@ snapper -c root set-config ALLOW_USERS=jbilger SYNC_ACL=yes
 chown -R :jbilger /.snapshots
 grub2-editenv - unset menu_auto_hide
 git clone https://github.com/Antynea/grub-btrfs.git /opt/grub-btrfs >> /var/debug.log 2>&1
-sed -i '/GRUB_BTRFS_GRUB_DIRNAME/s/^#//g; /GRUB_BTRFS_MKCONFIG/s/^#//g; /GRUB_BTRFS_MKCONFIG/s/bin/sbin/g; /GRUB_BTRFS_SCRIPT_CHECK/s/^#//g' /opt/grub-btrfs/config
+sed -i '/GRUB_BTRFS_GRUB_DIRNAME/s/^#//g; /GRUB_BTRFS_MKCONFIG=/s/^#//g; /GRUB_BTRFS_MKCONFIG=/s/bin/sbin/g; /GRUB_BTRFS_SCRIPT_CHECK/s/^#//g' /opt/grub-btrfs/config
 make -C /opt/grub-btrfs install
 grub2-mkconfig -o /boot/grub2/grub.cfg
 systemctl enable grub-btrfsd.service
