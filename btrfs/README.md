@@ -16,7 +16,7 @@ You can view these snapshots by running `snapper ls`
 
 You can roll back any install to an RO instance via the grub menu
 
-To rollback to a RW instanace, run `snapper --ambit classic rollback <NUM>`
+To rollback to a RW instance, run `snapper --ambit classic rollback <NUM>`
 
 ## Execution Flow
 
@@ -58,7 +58,7 @@ To rollback to a RW instanace, run `snapper --ambit classic rollback <NUM>`
 Logs are stored at:
 
 * The users home directory, under `~/STAGES.log`
-  * Basic staging information, logged after each stages compeltion
+  * Basic staging information, logged after each stage's completion
 * `/var/debug.log`
 * Trace logs of execution, recorded by each stage
 
@@ -71,7 +71,7 @@ The following parameters are built into the kickstart file and `btrfs-st-2.sh` t
 
 ## TODO
 
-* Encrpyted drive
+* Encrypted drive
 * Remove final reboot, or do some more actions in stage 3
   * Cleanup?
 * User configurable username/storage
