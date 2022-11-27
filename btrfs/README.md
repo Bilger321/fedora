@@ -6,7 +6,7 @@ To use this on your system, input the following boot line option from the instal
 inst.ks=https://jacobbilger.com/projects/fedora/btrfs/ks.cfg
 ```
 
-The system will reboot 3 times, and land on a login prompt, fully configured(!)
+The system will reboot 3 times and land on a login prompt, fully configured(!)
 
 #### Execution Flow
 `===KICKSTART===`
