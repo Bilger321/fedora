@@ -27,3 +27,4 @@ index 3cca83e..d14894b 100644
 
  # Path of grub-mkconfig_lib file, use by "grub-btrfs"
  # Might be '/usr/share/grub2/grub-mkconfig_lib' on some systems (Opensuse ...)
+ 
