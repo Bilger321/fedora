@@ -17,6 +17,7 @@ mount -a
 snapper -c root set-config ALLOW_USERS=jbilger SYNC_ACL=yes
 chown -R :jbilger /.snapshots
 grub2-editenv - unset menu_auto_hide
+git clone https://github.com/Antynea/grub-btrfs.git >> /var/debug.log 2>&1
 git clone git@github.com:Antynea/grub-btrfs.git /opt/grub-btrfs >> /var/debug.log 2>&1
 git -C /opt/grub-brtfs apply /opt/fedora-main/btrfs/scripts/btrfs.patch
 make -C /opt/grub-btrfs install
