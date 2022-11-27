@@ -3,6 +3,7 @@ Description=Stage 2 of BTRFS Install
 After=NetworkManager-wait-online.service
 
 [Service]
+User=root
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/bin/bash -x /opt/fedora-main/btrfs/scripts/btrfs-st-2.sh >> /var/debug.log 2>&1
