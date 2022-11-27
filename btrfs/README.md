@@ -65,4 +65,5 @@ The following paramters are built into the kickstart file and `btrfs-st-2.sh` to
 
 #### TODO
 * Encrpyt drive
-* Remove final reboot, or do some more actions in stage 3.
+* Remove final reboot, or do some more actions in stage 3
+   * Cleanup?
