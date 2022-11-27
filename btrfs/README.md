@@ -1,6 +1,6 @@
 ## Btrfs Automated Install
-
-#### To Run
+___
+### To Run
 To use this on your system, input the following boot line option from the install media:
 ```
 inst.ks=https://jacobbilger.com/projects/fedora/btrfs/ks.cfg
@@ -9,11 +9,14 @@ inst.ks=https://jacobbilger.com/projects/fedora/btrfs/ks.cfg
 The system will reboot 4 times and land on a login prompt, fully configured(!)
 
 Any software installed via DNF will be tracked as a snapshot
+
 You can view these snapshots by running `snapper ls`
+
 You can roll back any install to an RO instance via the grub menu
+
 To rollback to a RW instanace, run `snapper --ambit classic rollback <NUM>`
 
-#### Execution Flow
+### Execution Flow
 `===KICKSTART===`
 1. Kickstart file `ks.cfg` does the following:
    * Provision primary drive with btrfs
@@ -56,21 +59,22 @@ To rollback to a RW instanace, run `snapper --ambit classic rollback <NUM>`
 
 9. Install is complete!
 
-#### Logging
+### Logging
 Logs are stored at:
 * The users home directory, under `~/STAGES.log`
    * Basic staging information, logged after each stages compeltion
 * `/var/debug.log`
    * Trace logs of execution, recorded by each stage
 
-#### Caveats
+### Caveats
 The following paramters are built into the kickstart file and `btrfs-st-2.sh` to cater to my specific laptop:
 * NVMe primary storage medium by default
 * Default user account of `jbilger`
 
-#### TODO
-* Encrpyt drive
+### TODO
+* Encrpyted drive
 * Remove final reboot, or do some more actions in stage 3
    * Cleanup?
+* User configurable username/storage
 
 Shouts [lordofpipes](https://github.com/lordofpipes) for the great [tutorial](https://lordofpipes.github.io/obscure-tutorials/docs/linux-tutorials/fedora-snapper/)
