@@ -8,6 +8,11 @@ inst.ks=https://jacobbilger.com/projects/fedora/btrfs/ks.cfg
 
 The system will reboot 4 times and land on a login prompt, fully configured(!)
 
+Any software installed via DNF will be tracked as a snapshot
+You can view these snapshots by running `snapper ls`
+You can roll back any install to an RO instance via the grub menu
+To rollback to a RW instanace, run `snapper --ambit classic rollback <NUM>`
+
 #### Execution Flow
 `===KICKSTART===`
 1. Kickstart file `ks.cfg` does the following:
@@ -67,3 +72,5 @@ The following paramters are built into the kickstart file and `btrfs-st-2.sh` to
 * Encrpyt drive
 * Remove final reboot, or do some more actions in stage 3
    * Cleanup?
+
+Shouts [lordofpipes](https://github.com/lordofpipes) for the great [tutorial](https://lordofpipes.github.io/obscure-tutorials/docs/linux-tutorials/fedora-snapper/)
