@@ -1,5 +1,4 @@
 ## Btrfs Automated Install
-___
 ### To Run
 To use this on your system, input the following boot line option from the install media:
 ```
