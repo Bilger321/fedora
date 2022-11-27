@@ -1,6 +1,6 @@
 [Unit]
 Description=Stage 2 of BTRFS Install
-After=sshd.service
+After=NetworkManager-wait-online.service
 
 [Service]
 Type=oneshot
