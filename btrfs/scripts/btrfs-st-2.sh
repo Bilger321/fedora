@@ -24,5 +24,5 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 systemctl enable grub-btrfsd.service
 systemctl disable /opt/fedora-main/btrfs/scripts/install_stage_2.service
 systemctl enable /opt/fedora-main/btrfs/scripts/install_stage_3.service
-echo "STAGE 2 COMPLETE" >> /home/jbilger/STAGES.log
+echo "STAGE 2 COMPLETE" >> /var/STAGES.log
 reboot

@@ -57,10 +57,10 @@ To rollback to a RW instance, run `snapper --ambit classic rollback <NUM>`
 
 Logs are stored at:
 
-* The users home directory, under `~/STAGES.log`
+* `/var/STAGES.log`
   * Basic staging information, logged after each stage's completion
 * `/var/debug.log`
-* Trace logs of execution, recorded by each stage
+  * Trace logs of execution, recorded by each stage
 
 ## Caveats
 
